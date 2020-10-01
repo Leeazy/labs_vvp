@@ -40,7 +40,7 @@ void Func_4() {
 	int x1, x2, y1, y2, x3, y3, x4, y4;
 	double S, P, a, b;
 	cin >> x1 >> y1 >> x2 >> y2;
-	x3 = x1; // так как стороны параллельны осям
+	x3 = x1; 
 	y3 = y2;
 	x4 = x2; 
 	y4 = y1;
