@@ -1,48 +1,59 @@
 #include <iostream>
 using namespace std;
-void F1() {
-	double a;
-	cout << "input number in bytes: ";
+void Function1() {
+	double a, rad;
+	cout << "input angle in degrees:";
 	cin >> a;
-	cout << "number in kilobytes: " << a / 1024 << endl;
+	rad = a * (3.14 / 180);
+	cout << "in rad: " << rad << endl;
 }
-void F2() {
-	int a, b, count;
+void Function2() {
+	double rad, a, p = 3.14;
+	cout << "input angle in rad: ";
+	cin >> rad;
+	a = rad * 180 / p;
+	cout << "in degrees: " << a << endl;
+}
+void Function3() {
+	double x, a, y, n;
+	cout << "input x kg, " << "input rub per x kg, " << "input y kg " << endl;
+	cin >> x >> a >> y;
+	n = a / x;
+	y = n * y;
+	cout << "per 1 kg: " << n << "\n" << "per y kg: " << y << endl;
+}
+void Function4() {
+	double v1, v2, s, t, s_new;
+	cout << "input v1, input v2, input s, input t" << endl;
+	cin >> v1 >> v2 >> s >> t;
+	s_new = s + (v1 + v2) * t;
+	cout << "s = " << s_new << endl;
+}
+void Function5() {
+	double x, a, b;
 	cout << "input a, b = ";
 	cin >> a >> b;
-	count = a / b;
-	cout << "count = " << count << endl;
+	x = -b / a;
+	cout << "x = " << x << endl;
 }
-void F3() {
-	double l_z, m;
-	int a, b;
-	cout << "input a, b = ";
-	cin >> a >> b;
-	l_z = a / b;
-	m = a - (b * l_z);
-	cout << m << endl;
-}
-void F4() {
-	int a;
-	cout << "input a = ";
-	cin >> a;
-	a = a % 10 * 10 + (a / 10) % 10;
-	cout << a << endl;
-}
-void F5() {
-	int a, first, second, third;
-	cout << "input a = ";
-	cin >> a;
-	first = (a / 100) % 10;
-	second = (a / 10) % 10;
-	third = a % 10;
-	a = second * 100 + third * 10 + first;
-	cout << a;
-}
+void Function6() {
+	double a1, b1, a2, b2, c1, c2, x, y, d_a, d_x, d_y;
+	cout << "input a1, b1, c1, a2, b2, c2 ";
+	cin >> a1 >> b1 >> c1 >> a2 >> b2 >> c2;
+	// kramer
+	d_a = a1 * b2 - a2 * b1;
+	d_x = c1 * b2 - c2 * b1;
+	d_y = a1 * c2 - a2 * c1;
+	x = d_x / d_a;
+	y = d_y / d_a;
+	cout << "x = " << x << " " << "y = " << y;
+}	
+
 int main() {
-	F1();
-	F2();
-	F3();
-	F4();
-	F5();
+	Function1();
+	Function2();
+	Function3();
+	Function4();
+	Function5();
+	Function6();
 }
