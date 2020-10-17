@@ -95,10 +95,10 @@ void f5() {
 	}
 }
 void f6() {
-	int a, n;
-	int &ref = n;
+	int a, n = 0;
 	cout << "task 6" << endl;
-	cin >> a, n = 0;
+	cout << "input a = ";
+	cin >> a;
 	if (a % 2 == 0) {
 		while (a) {
 			a /= 10;
